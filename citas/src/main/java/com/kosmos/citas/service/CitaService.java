@@ -36,6 +36,8 @@ public class CitaService {
             if(Objects.equals(cita.getDoctor().getDoctor_id(), c.getDoctor().getDoctor_id())){
                 return "Doctor no dispónible";
             }
+            citaRepository.save(cita);
+
         }
         return "{Cita agendada}";
     }
